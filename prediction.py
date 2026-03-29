@@ -417,8 +417,7 @@ if st.button('Predict'):
 
     label_map = {
         0: 'Dropout',
-        1: 'Enrolled',
-        2: 'Graduate'
+        1: 'Graduate'
     }
 
     if prediction == 0:
