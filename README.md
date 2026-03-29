@@ -50,6 +50,9 @@ Dashboard ini dibuat menggunakan Streamlit dan menampilkan beberapa visualisasi 
 - Rata-rata Nilai dan SKS: Boxplot nilai dan SKS semester 1 dan 2.
 - Status Ekonomi & Beasiswa: Visualisasi Debtor dan Scholarship Holder.
 
+Dashboard ini dapat diakses di
+[https://jayajayainstitut-dashboard.streamlit.app/](https://jayajayainstitut-dashboard.streamlit.app/).
+
 ## Menjalankan Sistem Machine Learning
 Prototype sistem prediksi dibangun dengan Streamlit dan model machine learning yang disimpan menggunakan Joblib.
 
@@ -59,6 +62,9 @@ streamlit run prediction.py
 ```
 
 Prototype kemudian akan berjalan di [http://localhost:8501](http://localhost:8501) dan menampilkan form input untuk fitur-fitur yang diperlukan untuk prediksi.
+
+Prototype ini dapat diakses di
+[https://jayajayainstitut-prediction.streamlit.app/](https://jayajayainstitut-prediction.streamlit.app/).
 
 ## Conclusion
 Proyek ini berhasil menyelesaikan permasalahan bisnis yang dihadapi Jaya Jaya Institut dengan cara berikut.
