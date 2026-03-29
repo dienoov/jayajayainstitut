@@ -67,9 +67,8 @@ Prototype ini dapat diakses di
 [https://jayajayainstitut-prediction.streamlit.app/](https://jayajayainstitut-prediction.streamlit.app/).
 
 ## Conclusion
-Proyek ini berhasil menyelesaikan permasalahan bisnis yang dihadapi Jaya Jaya Institut dengan cara berikut.
-- Membuat dashboard interaktif untuk memvisualisasikan kondisi siswa.
-- Mengembangkan model prediksi yang dapat membantu mendeteksi siswa berisiko dropout lebih awal.
+- Berdasarkan hasil analisis data melalui exploratory data analysis (EDA) dan visualisasi pada dashboard, ditemukan bahwa faktor utama yang berkaitan dengan risiko dropout mahasiswa adalah performa akademik, yaitu jumlah mata kuliah yang disetujui (approved)dan nilai rata-rata semester. Di sisi lain, mahasiswa yang menerima beasiswa memiliki tingkat kelulusan yang lebih tinggi.
+- Dari sisi pemodelan machine learning, model yang dikembangkan menunjukkan performa yang sangat baik dengan tingkat akurasi sebesar 92%, serta nilai precision, recall, dan F1-score yang tinggi di sekitar 90–94%. Hal ini menunjukkan bahwa model mampu mengklasifikasikan status siswa dengan cukup akurat dan konsisten.
 
 ### Rekomendasi Action Items
 Beberapa tindakan yang bisa dilakukan Jaya Jaya Institut.
