@@ -71,6 +71,7 @@ col2.plotly_chart(fig, use_container_width=True)
 col1, col2 = st.columns(2)
 
 col1.subheader('Debtor Status')
+df['Debtor'] = df['Debtor'].map({0: 'No', 1: 'Yes'})
 fig = px.histogram(
     df,
     x='Debtor',
@@ -80,6 +81,7 @@ fig = px.histogram(
 col1.plotly_chart(fig, use_container_width=True)
 
 col2.subheader('Scholarship Holder')
+df['Scholarship_holder'] = df['Scholarship_holder'].map({0: 'No', 1: 'Yes'})
 fig = px.histogram(
     df,
     x='Scholarship_holder',
