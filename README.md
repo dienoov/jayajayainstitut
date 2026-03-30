@@ -44,11 +44,31 @@ pip install -r requirements.txt
 ```
 
 ## Business Dashboard
-Dashboard ini dibuat menggunakan Streamlit dan menampilkan beberapa visualisasi berikut.
-- Distribusi Status Siswa: Dropout, Enrolled, Graduate.
-- Distribusi Usia dan Gender: Visualisasi histogram dan pie chart.
-- Rata-rata Nilai dan SKS: Boxplot nilai dan SKS semester 1 dan 2.
-- Status Ekonomi & Beasiswa: Visualisasi Debtor dan Scholarship Holder.
+Dashboard ini dibuat menggunakan Streamlit. Berikut adalah beberapa insight yang dapat diperoleh dari dashboard ini.
+- Approved Units (1st & 2nd Semester): Visualisasi box plot untuk jumlah unit yang disetujui di semester pertama dan kedua.
+  - Dropout memiliki median unit yang disetujui sangat rendah, dengan distribusi yang sangat lebar, artinya banyak mahasiswa dropout yang hampir tidak menyelesaikan unit sama sekali.
+  - Graduate memiliki median sekitar 6 unit per semester dengan distribusi yang lebih rapat dan konsisten.
+  - Pola ini menunjukkan bahwa jumlah unit yang berhasil diselesaikan bisa menjadi prediktor kuat.
+- Grades (1st & 2nd Semester): Visualisasi box plot untuk nilai rata-rata di semester pertama dan kedua.
+  - Dropout memiliki IQR yang sangat lebar (dari 0 hingga 12), dengan median sekitar 10–11. Hal ini menandakan variasi nilai yang ekstrem sebagian mendapat nilai baik, sebagian jelek.
+  - Graduate memiliki distribusi lebih sempit dengan median sekitar 12–13, menunjukkan performa yang lebih stabil dan konsisten.
+  - Nilai dropout tidak selalu rendah, namun variabilitasnya yang tinggi menunjukkan bahwa nilai bisa menjadi indikator risiko, terutama jika nilainya sangat rendah.
+- Gender: Visualisasi bar chart untuk jenis kelamin mahasiswa.
+  - Mahasiswa perempuan mendominasi kelompok Graduate secara signifikan.
+  - Mahasiswa laki-laki menunjukkan rasio dropout yang lebih tinggi relatif terhadap jumlahnya.
+  - Pola ini menunjukkan bahwa jenis kelamin bisa menjadi faktor yang mempengaruhi risiko dropout, dengan mahasiswa laki-laki lebih rentan terhadap risiko tersebut.
+- Age at Enrollment: Visualisasi box plot untuk usia saat mendaftar.
+  - Mayoritas mahasiswa mendaftar di usia 17–22 tahun.
+  Mahasiswa yang lebih muda saat mendaftar cenderung lebih banyak yang lulus.
+  - Mahasiswa berusia di atas 25 tahun memiliki proporsi dropout yang lebih tinggi.
+  - Usia saat mendaftar bisa menjadi indikator risiko, dengan mahasiswa yang lebih tua cenderung memiliki risiko dropout yang lebih tinggi.
+- Debtor Status: Visualisasi bar chart untuk status debitur mahasiswa.
+  - Mahasiswa yang berstatus debitur (Yes) memiliki proporsi dropout yang jauh lebih tinggi dibanding graduate, menunjukkan tekanan finansial berhubungan kuat dengan dropout.
+- Scholarship Holder: Visualisasi bar chart untuk status pemegang beasiswa mahasiswa.
+  - Pemegang beasiswa mayoritas berada di kelompok Graduate, beasiswa tampaknya memberikan dukungan finansial yang signifikan untuk membantu mahasiswa menyelesaikan studi mereka.
+- Tuition Fees Up to Date: Visualisasi bar chart untuk status pembayaran uang kuliah.
+  - Mahasiswa yang tidak membayar uang kuliah tepat waktu sangat dominan di kelompok Dropout.
+  - Sebaliknya, Graduate hampir semuanya membayar tepat waktu, menunjukkan fitur ini sebagai sinyal peringatan dini yang kuat.
 
 Dashboard ini dapat diakses di
 [https://jayajayainstitut-dashboard.streamlit.app/](https://jayajayainstitut-dashboard.streamlit.app/).
