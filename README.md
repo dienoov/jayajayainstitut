@@ -12,7 +12,7 @@ Jumlah dropout yang tinggi ini tentunya menjadi salah satu masalah yang besar un
 - Perlunya ada sistem preventif untuk meningkatkan kelulusan siswa.
 
 ### Cakupan Proyek
-- Menganalisis data historis siswa untuk menemukan pola yang berhubungan dengan status akademik: Dropout, Enrolled (aktif), dan Graduate (lulus).
+- Menganalisis data historis siswa untuk menemukan pola yang berhubungan dengan status akademik: Dropout dan Graduate.
 - Membangun dashboard untuk memvisualisasikan informasi siswa.
 - Mengembangkan model machine learning untuk memprediksi status siswa di akhir masa studi.
 - Menyediakan prototipe sistem prediksi berbasis web (Streamlit) yang memungkinkan pengguna untuk mendapatkan prediksi risiko dropout atau lulus
@@ -87,11 +87,14 @@ Prototype ini dapat diakses di
 [https://jayajayainstitut-prediction.streamlit.app/](https://jayajayainstitut-prediction.streamlit.app/).
 
 ## Conclusion
-- Berdasarkan hasil analisis data melalui exploratory data analysis (EDA) dan visualisasi pada dashboard, ditemukan bahwa faktor utama yang berkaitan dengan risiko dropout mahasiswa adalah performa akademik, yaitu jumlah mata kuliah yang disetujui (approved)dan nilai rata-rata semester. Di sisi lain, mahasiswa yang menerima beasiswa memiliki tingkat kelulusan yang lebih tinggi.
-- Dari sisi pemodelan machine learning, model yang dikembangkan menunjukkan performa yang sangat baik dengan tingkat akurasi sebesar 92%, serta nilai precision, recall, dan F1-score yang tinggi di sekitar 90–94%. Hal ini menunjukkan bahwa model mampu mengklasifikasikan status siswa dengan cukup akurat dan konsisten.
+- Berdasarkan hasil analisis data melalui exploratory data analysis (EDA) dan visualisasi pada dashboard, ditemukan bahwa beberapa fitur seperti jumlah unit yang disetujui di semester pertama dan kedua, nilai rata-rata, status debitur, status pemegang beasiswa, dan pembayaran uang kuliah tepat waktu memiliki korelasi yang kuat dengan status akademik mahasiswa. Mahasiswa yang memiliki approved units rendah, nilai yang sangat bervariasi, berstatus debitur, tidak memegang beasiswa, dan tidak membayar uang kuliah tepat waktu cenderung memiliki risiko lebih tinggi untuk melakukan dropout.
+- Dari sisi pemodelan machine learning, model yang dikembangkan menunjukkan performa yang sangat baik dengan tingkat akurasi sebesar 92%, serta nilai precision, recall, dan F1-score yang tinggi di sekitar 90–94%. Model ini mampu memprediksi dengan baik mahasiswa yang berisiko untuk melakukan dropout maupun yang kemungkinan besar akan lulus, sehingga dapat menjadi alat yang efektif untuk institusi dalam mengidentifikasi dan memberikan intervensi kepada mahasiswa yang membutuhkan dukungan tambahan.
 
 ### Rekomendasi Action Items
 Beberapa tindakan yang bisa dilakukan Jaya Jaya Institut.
-- Memberikan bimbingan khusus bagi siswa dengan prediksi risiko dropout tinggi.
-- Memantau tren nilai dan SKS untuk mendeteksi penurunan performa akademik lebih awal.
-- Mengintegrasikan dashboard ini ke sistem administrasi kampus untuk pemantauan real-time.
+- Approved units 1st & 2nd semester adalah prediktor paling dominan dalam model. Dari visualisasi box plot, mahasiswa Dropout memiliki median approved units mendekati 0–2 per semester, sedangkan Graduate konsisten di 6 unit. Artinya mahasiswa dengan approved units rendah berisiko sangat tinggi untuk dropout. 
+  - Rekomendasi: Institusi membangun sistem dashboard early warning yang secara otomatis menandai mahasiswa dengan approved units rendah (misalnya di bawah 3 unit) pada semester pertama dan kedua. Mahasiswa yang teridentifikasi dapat segera diberikan intervensi seperti bimbingan akademik, konseling, atau dukungan tambahan untuk membantu mereka meningkatkan performa akademik.
+- Tuition fees up to date memiliki korelasi kuat dengan status akademik. Mahasiswa yang tidak membayar tepat waktu sangat dominan di kelompok Dropout, sementara Graduate hampir semuanya membayar tepat waktu. Hal ini menunjukkan bahwa masalah finansial bisa menjadi faktor risiko utama untuk dropout.
+  - Rekomendasi: Institusi perlu membuat skema cicilan atau penundaan pembayaran bagi mahasiswa yang memiliki tunggakan UKT, terutama bagi mereka yang menunjukkan tanda-tanda risiko akademik. Selain itu, institusi dapat meningkatkan komunikasi dengan mahasiswa mengenai pentingnya pembayaran tepat waktu dan menyediakan bantuan keuangan atau beasiswa tambahan bagi mereka yang mengalami kesulitan finansial.
+- Scholarship holder menunjukkan bahwa pemegang beasiswa sangat dominan di kelompok Graduate. Beasiswa tampaknya memberikan dukungan finansial yang signifikan untuk membantu mahasiswa menyelesaikan studi mereka, sehingga menjadi faktor penting dalam meningkatkan tingkat kelulusan.
+  - Rekomendasi: Institusi memperluas kriteria penerima beasiswa tidak hanya berbasis prestasi, tetapi juga berbasis risiko dropout (berdasarkan approved units, pembayaran UKT, dll). Dengan memberikan beasiswa kepada mahasiswa yang berisiko tinggi untuk dropout, institusi dapat memberikan dukungan finansial yang mereka butuhkan untuk tetap melanjutkan studi dan meningkatkan tingkat kelulusan secara keseluruhan.
